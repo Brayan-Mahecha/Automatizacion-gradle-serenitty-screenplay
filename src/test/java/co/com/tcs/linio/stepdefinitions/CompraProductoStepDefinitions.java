@@ -2,7 +2,7 @@ package co.com.tcs.linio.stepdefinitions;
 
 
 import co.com.tcs.linio.tasks.seleccionar;
-import co.com.tcs.linio.userinterface.linioPage;
+import co.com.tcs.linio.userinterface.LinioPage;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -10,13 +10,11 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CompraProductoStepDefinitions {
 
-    linioPage page;
+    LinioPage page;
 
 
 // configuracion inicial creacion escenario
@@ -38,6 +36,7 @@ public class CompraProductoStepDefinitions {
     @When("^el usuario ingresa al menu hogar colchones base cama y almohadas y elije un producto$")
     public void elUsuarioIngresaAlMenuHogarColchonesBaseCamaYAlmohadasYElijeUnProducto() {
         theActorInTheSpotlight().attemptsTo(seleccionar.SeIngresaColchones());
+
     }
 
 
