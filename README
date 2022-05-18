@@ -1,0 +1,12 @@
+
+README
+-Se realiza un proyecto de automatización web usando patron de Screenplay la estructura de paquetes se realiza según estándar de TCS
+-Proyecto construido con gradle y en el lenguaje de programación java
+-Los casos de prueba se realizaran mediante scenarios con el lenguaje gherkin bajo la extension .feature y bajo el diseño de lenguaje BDD
+-Se utiliza la herramienta cucumber para implementar la capa de conexión entre la interfaz y el lenguaje gherkin
+-Las dependencias o librerías utilizadas para compilar o ejecutar el proyecto fueron la siguientes y estas fueron cargadas en el archivo build.gradle
+-El proyecto se comparte en un repositorio github con acceso a sebastian.goar159@outlook.com, se hará en la rama llamada main
+-Se realizan dos escenarios, uno con el producto seleccionado (camino feliz) y otro cuando no se selecciona producto
+-Se instala extensión de ChromeDriver para realizar automatización en Chrome y diferentes navegadores
+-Se realiza mapeo a los elementos usando xpath dinamico y id
+-Implementamos de tasks como base de principios solid

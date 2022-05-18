@@ -35,7 +35,7 @@ public class CompraProductoStepDefinitions {
 
     @When("^el usuario ingresa al menu hogar colchones base cama y almohadas y elije un producto$")
     public void elUsuarioIngresaAlMenuHogarColchonesBaseCamaYAlmohadasYElijeUnProducto() {
-        theActorInTheSpotlight().attemptsTo(seleccionar.SeIngresaColchones());
+        theActorInTheSpotlight().attemptsTo(seleccionar.seleccionamosColchones());
 
     }
 

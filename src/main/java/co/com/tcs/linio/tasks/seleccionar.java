@@ -1,5 +1,6 @@
 package co.com.tcs.linio.tasks;
 
+import co.com.tcs.linio.userinterface.ClickInicio;
 import co.com.tcs.linio.userinterface.LinioPage;
 
 import co.com.tcs.linio.userinterface.SeccionColchones;
@@ -25,12 +26,13 @@ public class seleccionar implements Task {
     //indicamos acciones de pagina homePage
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(LinioPage.BOTON_MENU));
-        actor.attemptsTo (Click.on(LinioPage.PRODUCTO));
+        actor.attemptsTo(Click.on(ClickInicio.BOTON_MENU));
+        actor.attemptsTo (Click.on(ClickInicio.OPCION_COLCHONES));
+        actor.attemptsTo (Click.on(SeccionColchones.PRODUCTO));
     }
 
-    // creamos metodo para instrumentar tarea seleccionar colchones que viene desde overrider
-    public static seleccionar SeIngresaColchones (){ return Tasks.instrumented(seleccionar.class);
+    // creamos metodo que retorna la tarea instrumentada  que viene desde overrider
+    public static seleccionar seleccionamosColchones (){ return Tasks.instrumented(seleccionar.class);
     }
 
 }
