@@ -1,6 +1,7 @@
 package co.com.tcs.linio.stepdefinitions;
 
 
+import co.com.tcs.linio.tasks.seleccionar;
 import co.com.tcs.linio.userinterface.LinioPage;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -30,9 +31,9 @@ public class CompraProductoStepDefinitions {
     }
 
 
-    @When("^el usuario ingresa al menu hogar colchones base cama y almohadas y elije un producto$")
-    public void elUsuarioIngresaAlMenuHogarColchonesBaseCamaYAlmohadasYElijeUnProducto() {
-        theActorInTheSpotlight().attemptsTo();
+    @When("^el usuario interactua con el header alto de la pagina$")
+    public void elusuariointeractuaconelheaderaltodelapagina() {
+        theActorInTheSpotlight().attemptsTo(seleccionar.seleccionamosColchones());
 
     }
 
