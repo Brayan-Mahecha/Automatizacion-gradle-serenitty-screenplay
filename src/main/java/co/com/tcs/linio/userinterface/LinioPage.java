@@ -10,7 +10,7 @@ import net.thucydides.core.pages.PageObject;
 
 // Aqui le decimos la direccion url
 
-@DefaultUrl("https://www.linio.com.co/")
+@DefaultUrl("https://www.americadecali.co/")
 
 // extiende desde serenityBDD  pageObject
 

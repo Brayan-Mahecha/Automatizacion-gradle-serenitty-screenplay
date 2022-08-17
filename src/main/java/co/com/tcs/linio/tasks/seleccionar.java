@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
+import org.openqa.selenium.remote.server.handler.ImplicitlyWait;
 
 
 //Implementamos task de serenitybdd
@@ -26,13 +27,7 @@ public class seleccionar implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(ClickInicio.BOTON_MENU),
-                Click.on(ClickInicio.OPCION_COLCHONES),
-                Click.on(SeccionColchones.PRODUCTO),
-                Click.on(AnadirCarrito.BOTON_DESPLEGABLE),
-                Click.on(AnadirCarrito.OPCION_TRES),
-                Click.on(AnadirCarrito.OPCION_ANADIR),
-                Click.on(AnadirCarrito.BOTON_IR_CARRITO)
+
         );
     }
 
