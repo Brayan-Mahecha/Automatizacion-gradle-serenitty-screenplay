@@ -15,24 +15,28 @@ import org.openqa.selenium.remote.server.handler.ImplicitlyWait;
 
 //Implementamos task de serenitybdd
 
-public class seleccionar implements Task {
+public class Recorrer implements Task {
 
 // creamos atributo de home para abrir pagina
    // private linioPage HomePage;
 
 
-    public seleccionar() {
+    public Recorrer() {
     }
 
     //indicamos acciones de pagina homePage
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(MechaPage.cookies));
-        actor.attemptsTo(Click.on(MechaPage.TIENDAS_OFICIALES));
+        actor.attemptsTo(Click.on(MechaPage.cookies),
+                Click.on(MechaPage.TIENDAS_OFICIALES),
+                Click.on(MechaPage.PATROCINADORES),
+                Click.on(MechaPage.PRENSA),
+                Click.on(MechaPage.REGISTRO),
+                Click.on(MechaPage.CONTACTO));
     }
 
     // creamos metodo que retorna la tarea instrumentada  que viene desde overrider
-    public static seleccionar seleccionamosColchones (){ return Tasks.instrumented(seleccionar.class);
+    public static Recorrer Header (){ return Tasks.instrumented(Recorrer.class);
     }
 
 }
