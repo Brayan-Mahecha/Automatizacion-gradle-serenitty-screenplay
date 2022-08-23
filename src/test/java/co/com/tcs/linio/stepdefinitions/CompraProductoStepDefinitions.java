@@ -2,6 +2,7 @@ package co.com.tcs.linio.stepdefinitions;
 
 
 import co.com.tcs.linio.questions.TheTitleAME;
+import co.com.tcs.linio.tasks.IngresarCorreo;
 import co.com.tcs.linio.tasks.Recorrer;
 import co.com.tcs.linio.userinterface.LinioPage;
 import cucumber.api.java.Before;
@@ -17,29 +18,27 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CompraProductoStepDefinitions {
-
     LinioPage page;
 
-
-// configuracion inicial creacion escenario
     @Before
     public void setup() {
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("Brayan");
     }
-
-
     @Given("^el usuario se encuentra en la pagina (.*)$")
     public void elUsuarioSeEncuentraEnLaPagina (String url) {
         theActorInTheSpotlight().attemptsTo(Open.browserOn(page));
     }
 
-
     @When("^el usuario interactua con el header alto de la pagina$")
     public void elusuariointeractuaconelheaderaltodelapagina() {
         theActorInTheSpotlight().attemptsTo(Recorrer.Header());
-
     }
+    @When("^el usuario ingrese las credenciales(.*)$")
+    public void elusuarioingreselascredenciales(String Email){
+        theActorInTheSpotlight().attemptsTo(IngresarCorreo.InLogin(Email));
+    }
+
     @Then("^el usuario deberia ver el nombre en la aplicacion (.*)$")
     public void elUsuarioDeberiaVerElNombreEnLaAplicacion(String titulo) {
         theActorInTheSpotlight().should(seeThat(TheTitleAME.isPresent(), Matchers.equalTo(titulo)));
