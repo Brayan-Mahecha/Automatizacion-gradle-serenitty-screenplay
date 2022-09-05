@@ -1,14 +1,26 @@
 
 README
 -Se realiza un proyecto de automatización web usando patron de diseño Screenplay
--Proyecto construido con gradle y en el lenguaje de programación java
+-Proyecto construido con GRADLE y en el lenguaje de programación java
 -Los casos de prueba se realizaran mediante scenarios con el lenguaje gherkin bajo la extension .feature y bajo el diseño de lenguaje BDD
 -Se utiliza la herramienta cucumber para implementar la capa de conexión entre la interfaz y el lenguaje gherkin
 -El proyecto se comparte en un repositorio github con acceso a publico se hará en la rama llamada main
--Se realizan dos escenarios, uno con el producto seleccionado (camino feliz) y otro cuando no se selecciona producto
--Se instala extensión de ChromeDriver para realizar automatización en Chrome
+-Se agrega archivo exe de ChromeDriver para realizar automatización en navegador Chrome
 -Se realiza mapeo a los elementos usando xpath dinamico y tambien se usan id
 -Implementamos de tasks como base de principios solid
 -Plugins 1. gerkhin - 2. cucumber for java
 -Las dependencias o librerías utilizadas para compilar o ejecutar el proyecto fueron cargadas en el archivo build.gradle(las tomamos de la pagina de serenity)
--Se crea feature - clase runner - step definitions - clase LinioPage extends PageObject para dar url por default - clase implementada des tast y de question
+-Se crea feature con un scenario outline - clase runner - step definitions - clase LinioPage extends PageObject para dar url por default - clase implementada des tast y de question
+
+1-se crea arquetipo diseño screenplay
+2-se descargan plugins gerkhin, cucumber
+3-se agrega driver de chorome
+4-dependencias en un archivo build.gradle
+5-configuramos properties
+6-creamos feature
+7-creamos runner y lo corremos para obtener stepDefinitions
+8-implementamos los tags del step
+9-creamos clase Mainpage donde le damos la url de la pagina
+10-creamos la clase en task donde ejecutamos las tareas
+11-creamos clase donde tendremos las rutas o selectores de los elementos id,name,css,xpath
+12-en el package question podemos hacer las validaciones

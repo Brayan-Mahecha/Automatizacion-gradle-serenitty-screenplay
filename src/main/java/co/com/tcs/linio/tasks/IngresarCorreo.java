@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.server.handler.ImplicitlyWait;
 import static co.com.tcs.linio.userinterface.MechaPage.INGRESAR_CORREO;
 
 public class IngresarCorreo implements Task {
+
+    //se crea atributo tipo strig con su constructor para usarlo en override
     String Email;
     public IngresarCorreo(String Email) {
     this.Email = Email;

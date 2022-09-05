@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-      features = "src\\test\\resources\\features\\compra_en_linio.feature",
+      features = "src\\test\\resources\\features\\header_america.feature",
         glue = "co.com.tcs.linio.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )
 
-public class compraproducto {
+public class HeaderAmerica {
 }

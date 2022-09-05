@@ -2,9 +2,10 @@ package co.com.tcs.linio.stepdefinitions;
 
 
 import co.com.tcs.linio.questions.TheTitleAME;
+import co.com.tcs.linio.questions.Themensaje;
 import co.com.tcs.linio.tasks.IngresarCorreo;
 import co.com.tcs.linio.tasks.Recorrer;
-import co.com.tcs.linio.userinterface.LinioPage;
+import co.com.tcs.linio.userinterface.AmericaPage;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,8 +18,8 @@ import org.hamcrest.Matchers;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-public class CompraProductoStepDefinitions {
-    LinioPage page;
+public class HeaderAmericaStepDefinitions {
+    AmericaPage page;
 
     @Before
     public void setup() {
@@ -43,6 +44,12 @@ public class CompraProductoStepDefinitions {
     public void elUsuarioDeberiaVerElNombreEnLaAplicacion(String titulo) {
         theActorInTheSpotlight().should(seeThat(TheTitleAME.isPresent(), Matchers.equalTo(titulo)));
         //el actor que esta en la luz, pudo ver, si el mensaje es visible , y comparelo con "mensaje"
+    }
+
+    @Then("^deberia ver la palabra (.*) en la pantalla$")
+    public void deberia_ver_la_palabra_en_la_pantalla (String palabraEsperada) throws Exception{
+        theActorInTheSpotlight().should(seeThat(Themensaje.isVisible(), Matchers.equalTo(palabraEsperada)));
+
     }
 
 
